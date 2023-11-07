@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,14 +25,26 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 10em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 5em;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
+h4 {
+  font-size: 1.5em;
   line-height: 1.1;
 }
 
@@ -65,5 +77,17 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 6em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 6em;
   }
 }
