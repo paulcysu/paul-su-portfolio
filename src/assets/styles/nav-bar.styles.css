@@ -11,14 +11,20 @@
 
 .sticky {
   padding: 1rem 0;
-  position: sticky;
+  position: fixed;
   top: 0;
   background: transparent !important;
-  visibility: visible;
+  visibility: hidden;
   backdrop-filter: blur(6px);
+  transform: translate3d(0,-100%,0);
+}
+
+.show {
+  visibility: visible;
   -webkit-transition: all cubic-bezier(.4,0,.2,1) .4s;
   -o-transition: all cubic-bezier(.4,0,.2,1) .4s;
   transition: all cubic-bezier(.4,0,.2,1) .4s;
+  transform: none;
 }
 
 .sticky a {

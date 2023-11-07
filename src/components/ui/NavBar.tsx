@@ -9,6 +9,7 @@ const NavBar: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [hover, setHover] = useState<string | null>(null);
   const [isSticky, setIsSticky] = useState<boolean>(false);
+  const [isStickyShow, setIsStickyShow] = useState<boolean>(false);
 
   const toggleMobileMenu = () => {
     setIsMobile(!isMobile);
@@ -18,7 +19,8 @@ const NavBar: React.FC = () => {
     const homeSection = document.getElementById("home-section");
     if (homeSection) {
       const { bottom } = homeSection.getBoundingClientRect();
-      setIsSticky(bottom - 200 < 0);
+      setIsSticky(bottom - 300 < 0);
+      setIsStickyShow(bottom - 200 < 0)
     }
   };
 
@@ -33,7 +35,7 @@ const NavBar: React.FC = () => {
   }
   
   return (
-    <nav className={`navbar ${isSticky ? 'sticky' : ''}`} onMouseLeave={() => setHover(null)}>
+    <nav className={`navbar ${isSticky ? 'sticky' : ''} ${isStickyShow ? 'show' : ''}`} onMouseLeave={() => setHover(null)}>
       <div className="navbar-container">
         <Link
           className={getLinkClassName("home")}
