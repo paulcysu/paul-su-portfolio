@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 import "../../assets/styles/nav-bar.styles.css";
 
 const hoverClass: string = "nav-link";
@@ -20,7 +22,7 @@ const NavBar: React.FC = () => {
     if (homeSection) {
       const { bottom } = homeSection.getBoundingClientRect();
       setIsSticky(bottom - 300 < 0);
-      setIsStickyShow(bottom - 200 < 0)
+      setIsStickyShow(bottom - 200 < 0);
     }
   };
 
@@ -32,112 +34,67 @@ const NavBar: React.FC = () => {
   const getLinkClassName = (link: string): string => {
     if (hover === null) return hoverClass;
     return hover === link ? hoverClass : notHoverClass;
-  }
-  
+  };
+
   return (
-    <nav className={`navbar ${isSticky ? 'sticky' : ''} ${isStickyShow ? 'show' : ''}`} onMouseLeave={() => setHover(null)}>
-      <div className="navbar-container">
-        <Link
-          className={getLinkClassName("home")}
-          to="home"
-          smooth={true}
-          duration={500}
-          onMouseEnter={() => setHover("home")}
-        >
-          home
-        </Link>
-        <Link
-          className={getLinkClassName("skill")}
-          to="skill"
-          smooth={true}
-          duration={500}
-          onMouseEnter={() => setHover("skill")}
-        >
-          skill
-        </Link>
-        <Link
-          className={getLinkClassName("work")}
-          to="work"
-          smooth={true}
-          duration={500}
-          onMouseEnter={() => setHover("work")}
-        >
-          work
-        </Link>
-        <Link
-          className={getLinkClassName("experience")}
-          to="experience"
-          smooth={true}
-          duration={500}
-          onMouseEnter={() => setHover("experience")}
-        >
-          experience
-        </Link>
-        <Link
-          className={getLinkClassName("contact")}
-          to="contact"
-          smooth={true}
-          duration={500}
-          onMouseEnter={() => setHover("contact")}
-        >
-          contact
-        </Link>
-        <div className="menu-icon" onClick={toggleMobileMenu}>
-          <i className={isMobile ? "fas fa-times" : "fas fa-bars"} />
-        </div>
-      </div>
-      {isMobile && (
-        <div className="mobile-menu">
+    <>
+      <nav
+        className={`navbar ${isSticky ? "sticky" : ""} ${
+          isStickyShow ? "show" : ""
+        }`}
+        onMouseLeave={() => setHover(null)}
+      >
+        <div className="navbar-container">
           <Link
-            className={hover === "home" ? hoverClass : notHoverClass}
+            className={getLinkClassName("home")}
             to="home"
             smooth={true}
             duration={500}
-            onClick={toggleMobileMenu}
+            onMouseEnter={() => setHover("home")}
           >
-            Home
+            home
           </Link>
           <Link
-            className={hover === "home" ? hoverClass : notHoverClass}
+            className={getLinkClassName("skill")}
             to="skill"
             smooth={true}
             duration={500}
-            onClick={toggleMobileMenu}
+            onMouseEnter={() => setHover("skill")}
           >
-            Skill
+            skill
           </Link>
           <Link
-            className={hover === "home" ? hoverClass : notHoverClass}
+            className={getLinkClassName("work")}
             to="work"
             smooth={true}
             duration={500}
-            onClick={toggleMobileMenu}
+            onMouseEnter={() => setHover("work")}
           >
-            Work
+            work
           </Link>
           <Link
-            className={hover === "home" ? hoverClass : notHoverClass}
+            className={getLinkClassName("experience")}
             to="experience"
             smooth={true}
             duration={500}
-            onClick={toggleMobileMenu}
+            onMouseEnter={() => setHover("experience")}
           >
-            Experience
+            experience
           </Link>
           <Link
-            className={hover === "home" ? hoverClass : notHoverClass}
+            className={getLinkClassName("contact")}
             to="contact"
             smooth={true}
             duration={500}
-            onClick={toggleMobileMenu}
+            onMouseEnter={() => setHover("contact")}
           >
-            Contact
+            contact
           </Link>
         </div>
-      )}
-    </nav>
+      </nav>
+      <FontAwesomeIcon icon={faHamburger} className="hamburger" onClick={toggleMobileMenu}/>
+    </>
   );
 };
-
 
 export default NavBar;

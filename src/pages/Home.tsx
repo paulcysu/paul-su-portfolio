@@ -19,17 +19,17 @@ const Home: React.FC = () => {
         <TypeAnimation
           sequence={[
             "WEB DEVELOPER",
-            3000,
+            2000,
             "WEB DEVELOPER: FRONT END",
-            3000,
+            2000,
             "WEB DEVELOPER: FULL STACK",
-            3000,
+            2000,
             () => {},
           ]}
           wrapper="h4"
           cursor={true}
           repeat={Infinity}
-          style={{ textAlign: "center",  marginBottom: "15rem" }}
+          style={{ textAlign: "center"}}
         />
         <div className="scroll-down-container">
           <div className="scroll-down">

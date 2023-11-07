@@ -87,18 +87,16 @@
 .hamburger {
   display: none;
   cursor: pointer;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px;
-  transition: all 0.3s ease;
+  color: #fff;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 768px) {
-  .navbar-nav {
+  .navbar {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -109,12 +107,11 @@
     padding: 1rem;
   }
 
-  .nav-item {
-    margin: 1rem 0;
-  }
-
   .hamburger {
     display: block;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
   }
 
   .nav-active {
