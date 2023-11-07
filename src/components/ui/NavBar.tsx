@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "../../assets/styles/nav-bar.styles.css";
 
@@ -8,10 +8,24 @@ const notHoverClass: string = "nav-link not-hover";
 const NavBar: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [hover, setHover] = useState<string | null>(null);
+  const [isSticky, setIsSticky] = useState<boolean>(false);
 
   const toggleMobileMenu = () => {
     setIsMobile(!isMobile);
   };
+
+  const handleScroll = () => {
+    const homeSection = document.getElementById("home-section");
+    if (homeSection) {
+      const { bottom } = homeSection.getBoundingClientRect();
+      setIsSticky(bottom - 200 < 0);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const getLinkClassName = (link: string): string => {
     if (hover === null) return hoverClass;
@@ -19,7 +33,7 @@ const NavBar: React.FC = () => {
   }
   
   return (
-    <nav className="navbar" onMouseLeave={() => setHover(null)}>
+    <nav className={`navbar ${isSticky ? 'sticky' : ''}`} onMouseLeave={() => setHover(null)}>
       <div className="navbar-container">
         <Link
           className={getLinkClassName("home")}

@@ -4,19 +4,36 @@ import ExperienceSection from "../components/ExperienceSection";
 import ContactSection from "../components/ContactSection";
 import Navbar from "../components/ui/NavBar";
 import Lottie from "lottie-react";
-import '../assets/styles/home.styles.css';
-import scrollDown from '../assets/images/lottie-scroll-down.json'
+import { TypeAnimation } from "react-type-animation";
+
+import "../assets/styles/home.styles.css";
+import scrollDown from "../assets/images/lottie-scroll-down.json";
 
 const Home: React.FC = () => {
   return (
     <div id="home">
-      <div className={"home-section"}>
-        <Navbar />
+      <Navbar />
+      <div id={"home-section"}>
+        {/* <Navbar /> */}
         <h1 className="name">PAUL SU</h1>
-        <h4 className="titles">WEB DEVELOPER: FRONT END & FULL STACK</h4>
+        <TypeAnimation
+          sequence={[
+            "WEB DEVELOPER",
+            3000,
+            "WEB DEVELOPER: FRONT END",
+            3000,
+            "WEB DEVELOPER: FULL STACK",
+            3000,
+            () => {},
+          ]}
+          wrapper="h4"
+          cursor={true}
+          repeat={Infinity}
+          style={{ textAlign: "center",  marginBottom: "15rem" }}
+        />
         <div className="scroll-down-container">
           <div className="scroll-down">
-            <Lottie animationData={scrollDown} loop={true}/>
+            <Lottie animationData={scrollDown} loop={true} />
           </div>
         </div>
       </div>

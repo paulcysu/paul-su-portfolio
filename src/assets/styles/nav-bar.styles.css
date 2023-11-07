@@ -1,12 +1,28 @@
-/* FILEPATH: /Users/paulsu/code/paul-su-portfolio/src/assets/styles/nav-bar.styles.css */
-
-/* Navbar styles */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  padding: 3rem;
+  padding: 3rem 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.sticky {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background: transparent !important;
+  visibility: visible;
+  backdrop-filter: blur(6px);
+  -webkit-transition: all cubic-bezier(.4,0,.2,1) .4s;
+  -o-transition: all cubic-bezier(.4,0,.2,1) .4s;
+  transition: all cubic-bezier(.4,0,.2,1) .4s;
+}
+
+.sticky a {
+  color: #66d9ed;
 }
 
 .navbar-brand {
@@ -47,6 +63,10 @@
   color: #fff;
 }
 
+.sticky .nav-link:hover {
+  color: #66d9ed;
+}
+
 .not-hover {
   color: #808080 !important;
   -webkit-transition: all cubic-bezier(.4,0,.2,1) .4s;
@@ -54,7 +74,10 @@
   transition: all cubic-bezier(.4,0,.2,1) .4s;
 }
 
-/* Hamburger menu styles */
+.not-hover .stick {
+  color: #808080 !important;
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
@@ -68,7 +91,6 @@
   transition: all 0.3s ease;
 }
 
-/* Media query for mobile */
 @media (max-width: 768px) {
   .navbar-nav {
     display: none;
