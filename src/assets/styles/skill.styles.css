@@ -1,6 +1,6 @@
 #skill {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0.1)), url(../images/highlighted-code-snippets.png);
-  background-size: contain;
+  background-image: url(../images/red-water-paint-stroke.png);
+  background-size: cover;
   min-height: 100vh;
 }
 
@@ -8,15 +8,16 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  backdrop-filter: blur(6px);
 }
 
 .skill {
-  border: 2px solid white; 
+  border: 2px solid black; 
+  border-radius: 1rem;
   padding: 10px; 
   margin: 10px;
   width: 25rem;
   padding: 1rem;
+  backdrop-filter: blur(6px);
 }
 
 .skill-title-container {
@@ -42,13 +43,13 @@
 .skill-content::before {
   content: "<h3>";
   margin-bottom: 5px;
-  color: gray;
+  color: black;
 }
 
 .skill-content::after {
   content: "</h3>";
   margin-top: 5px;
-  color: gray;
+  color: black;
 }
 
 .skill-experience {

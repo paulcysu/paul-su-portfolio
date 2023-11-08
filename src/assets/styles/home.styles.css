@@ -1,4 +1,5 @@
 #home-section {
+  background-image: url(../images/light-blue-water-paint-stroke.jpg);
   background-size: cover;
   max-width: 100%;
   min-height: 100vh;
@@ -24,5 +25,4 @@
 .scroll-down {
   text-align: center;
   width: 8rem;
-  color: black;
 }

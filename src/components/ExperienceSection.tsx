@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "../assets/styles/experience.styles.css";
 
 type ExperienceItem = {
   location: string;

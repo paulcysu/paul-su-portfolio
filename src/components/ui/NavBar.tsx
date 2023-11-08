@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHamburger, faChampagneGlasses } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMultiply } from "@fortawesome/free-solid-svg-icons";
 import "../../assets/styles/nav-bar.styles.css";
 
 const hoverClass: string = "nav-link";
@@ -103,7 +103,7 @@ const NavBar: React.FC = () => {
           </Link>
         </div>
         <FontAwesomeIcon
-          icon={isMobile ? faChampagneGlasses : faHamburger}
+          icon={isMobile ? faMultiply : faBars}
           className="hamburger"
           onClick={toggleMobileMenu}
         />

@@ -4,20 +4,22 @@ import PhpIcon from "../assets/images/php.svg"
 
 const skills = [
   {
-    title: 'Frontend Dev',
+    title: 'Front End',
     icon: ReactIcon,
     alt: "React Logo",
     description: 'React, Typescript',
     experience: '3+ years of experience',
-    color: 'green'
+    color: 'green',
+    iconColor: '#61DBFB'
   },
   {
-    title: 'Fullstack Dev',
+    title: 'Full Stack',
     icon: PhpIcon,
     alt: "PHP Logo",
     description: 'Laravel, PostgreSQL',
     experience: '2+ years of experience',
-    color: 'yellow'
+    color: 'yellow',
+    iconColor: '#787cb5'
   }
 ]
 
@@ -29,9 +31,9 @@ const SkillSection = () => {
         {skills.map((skill, index) => (
           <div className="skill" key={'skill-' + index}>
             <div className="skill-title-container">
-              <img src={skill.icon} alt={skill.alt} className="icon" />
+              <img src={skill.icon} alt={skill.alt} className="icon" style={{color: skill.iconColor}} />
               <div>
-                <h3 className={"underline-" + skill.color + " skill-title"}>{skill.title}</h3>
+                <h3 className={"skill-title"}>{skill.title}</h3>
                 <h3 className="skill-description">{skill.description}</h3>
               </div>
             </div>

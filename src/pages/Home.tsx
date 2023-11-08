@@ -23,10 +23,10 @@ const Home: React.FC = () => {
             sequence={[
               "WEB DEVELOPER",
               2000,
-              () => setTextColor("#4285F4"), // blue
+              () => setTextColor("red"),
               "WEB DEVELOPER: FRONT END",
               2000,
-              () => setTextColor("#0F9D58"), // green
+              () => setTextColor("yellow"),
               "WEB DEVELOPER: FULL STACK",
               2000,
               () => setTextColor("black"),

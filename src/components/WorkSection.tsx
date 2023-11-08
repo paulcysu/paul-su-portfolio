@@ -1,7 +1,8 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { projects } from "../data/projects";
+
+import "../assets/styles/work.styles.css";
 
 type Project = {
   id: number;
