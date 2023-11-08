@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
   padding: 3rem 0;
   position: absolute;
   top: 0;
@@ -30,14 +29,13 @@
 }
 
 .sticky a {
-  color: #66d9ed;
+  color: #4285F4;
 }
 
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: #fff;
 }
 
 .navbar-container {
@@ -57,7 +55,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: #fff;
+  color: black;
   width: 6rem;
   margin: 0 1em;
   text-align: center;
@@ -68,11 +66,11 @@
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: black;
 }
 
 .sticky .nav-link:hover {
-  color: #66d9ed;
+  color: #4285F4;
 }
 
 .not-hover {
@@ -89,12 +87,12 @@
 .hamburger {
   display: none;
   cursor: pointer;
-  color: #fff;
+  color: black;
   padding: 1rem;
   position: absolute;
   top: 0;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 @media (max-width: 768px) {
@@ -109,7 +107,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #333;
+    backdrop-filter: blur(6px);
     padding: 1rem;
     animation: fadeOut 1s;
   }
@@ -120,6 +118,8 @@
     align-items: start;
     padding-left: 5em;
     z-index: 1;
+    background-color: #fff;
+    backdrop-filter: blur(6px);
     animation: fadeIn 1s;
   }
 

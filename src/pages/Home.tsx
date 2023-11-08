@@ -1,3 +1,4 @@
+import { useState } from "react";
 import SkillSection from "../components/SkillSection";
 import WorkSection from "../components/WorkSection";
 import ExperienceSection from "../components/ExperienceSection";
@@ -10,30 +11,37 @@ import "../assets/styles/home.styles.css";
 import scrollDown from "../assets/images/lottie-scroll-down.json";
 
 const Home: React.FC = () => {
+  const [textColor, setTextColor] = useState("black");
+
   return (
     <div id="home">
       <Navbar />
       <div id={"home-section"}>
-        {/* <Navbar /> */}
         <h1 className="name">PAUL SU</h1>
-        <TypeAnimation
-          sequence={[
-            "WEB DEVELOPER",
-            2000,
-            "WEB DEVELOPER: FRONT END",
-            2000,
-            "WEB DEVELOPER: FULL STACK",
-            2000,
-            () => {},
-          ]}
-          wrapper="h4"
-          cursor={true}
-          repeat={Infinity}
-          style={{ textAlign: "center"}}
-        />
+        <h4 style={{ textAlign: "center", color: textColor }}>
+          <TypeAnimation
+            sequence={[
+              "WEB DEVELOPER",
+              2000,
+              () => setTextColor("#4285F4"), // blue
+              "WEB DEVELOPER: FRONT END",
+              2000,
+              () => setTextColor("#0F9D58"), // green
+              "WEB DEVELOPER: FULL STACK",
+              2000,
+              () => setTextColor("black"),
+            ]}
+            cursor={true}
+            repeat={Infinity}
+          />
+        </h4>
         <div className="scroll-down-container">
           <div className="scroll-down">
-            <Lottie animationData={scrollDown} loop={true} />
+            <Lottie
+              animationData={scrollDown}
+              loop={true}
+              style={{ height: "80px", marginBottom: "3rem" }}
+            />
           </div>
         </div>
       </div>

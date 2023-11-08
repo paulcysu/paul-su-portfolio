@@ -36,6 +36,12 @@ const NavBar: React.FC = () => {
     return hover === link ? hoverClass : notHoverClass;
   };
 
+  const onLinkClick = () => {
+    if (isMobile) {
+      toggleMobileMenu();
+    }
+  }
+
   return (
     <>
       <nav
@@ -51,6 +57,7 @@ const NavBar: React.FC = () => {
             smooth={true}
             duration={500}
             onMouseEnter={() => setHover("home")}
+            onClick={onLinkClick}
           >
             home
           </Link>
@@ -60,6 +67,7 @@ const NavBar: React.FC = () => {
             smooth={true}
             duration={500}
             onMouseEnter={() => setHover("skill")}
+            onClick={onLinkClick}
           >
             skill
           </Link>
@@ -69,6 +77,7 @@ const NavBar: React.FC = () => {
             smooth={true}
             duration={500}
             onMouseEnter={() => setHover("work")}
+            onClick={onLinkClick}
           >
             work
           </Link>
@@ -78,6 +87,7 @@ const NavBar: React.FC = () => {
             smooth={true}
             duration={500}
             onMouseEnter={() => setHover("experience")}
+            onClick={onLinkClick}
           >
             experience
           </Link>
@@ -87,6 +97,7 @@ const NavBar: React.FC = () => {
             smooth={true}
             duration={500}
             onMouseEnter={() => setHover("contact")}
+            onClick={onLinkClick}
           >
             contact
           </Link>
