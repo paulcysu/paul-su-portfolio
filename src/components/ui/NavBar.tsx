@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHamburger } from "@fortawesome/free-solid-svg-icons";
+import { faHamburger, faChampagneGlasses } from "@fortawesome/free-solid-svg-icons";
 import "../../assets/styles/nav-bar.styles.css";
 
 const hoverClass: string = "nav-link";
@@ -44,7 +44,7 @@ const NavBar: React.FC = () => {
         }`}
         onMouseLeave={() => setHover(null)}
       >
-        <div className="navbar-container">
+        <div className={`navbar-container ${isMobile ? 'open-nav' : ''}`}>
           <Link
             className={getLinkClassName("home")}
             to="home"
@@ -91,8 +91,12 @@ const NavBar: React.FC = () => {
             contact
           </Link>
         </div>
+        <FontAwesomeIcon
+          icon={isMobile ? faChampagneGlasses : faHamburger}
+          className="hamburger"
+          onClick={toggleMobileMenu}
+        />
       </nav>
-      <FontAwesomeIcon icon={faHamburger} className="hamburger" onClick={toggleMobileMenu}/>
     </>
   );
 };
