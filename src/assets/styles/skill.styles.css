@@ -6,7 +6,7 @@
 
 .skill-section {
   color: black;
-  background-color: rgb(222, 222, 222);
+  background-color: rgb(240, 240, 240);
   border-radius: 1rem;
   padding: 1rem;
   display: flex;
@@ -141,6 +141,7 @@
   .skill-description {
     max-width: none;
     margin-bottom: 2em;
+    text-align: right;
   }
 
   .airplane-tickets {
@@ -176,6 +177,11 @@
   .skill-section {
     flex-direction: column;
     min-width: auto;
+  }
+
+  .skill-description {
+    max-width: none;
+    text-align: right;
   }
 
   .airplane-tickets {
