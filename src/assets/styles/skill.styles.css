@@ -1,83 +1,97 @@
 #skill {
-  background-image: url(../images/red-water-paint-stroke.png);
-  background-size: cover;
-  min-height: 100vh;
-}
-
-.skills-container {
+  color: black;
+  background-color: rgb(222, 222, 222);
+  border-radius: 1rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 1300px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
-.skill {
-  border: 2px solid black; 
-  border-radius: 1rem;
-  padding: 10px; 
-  margin: 10px;
-  width: 25rem;
+.react-logo {
+  height: 100px;
+  width: 100px;
   padding: 1rem;
-  backdrop-filter: blur(6px);
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  transform: rotate(20deg);
+  left: -20px;
+  bottom: -200px;
 }
 
-.skill-title-container {
+.frontend-developer-bubble {
+  background-color: black;
+  color: white;
+  padding: 1em;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 3;
+  height: 25px;
+  position: absolute;
+  bottom: -620px;
+  margin-left: 130px;
+}
+
+.highlight {
+  position: relative;
+  font-weight: bold;
+  color: white;
+}
+
+.highlight::before {
+  background-color: #595510;
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
+.skill-images {
   display: flex;
-  align-items: center;
-  padding-left: 1rem;
-}
-
-.skill-title {
-  margin: 0;
-  padding: 0;
+  max-width: 50%;
 }
 
 .skill-description {
-  margin: 0;
-  padding: 0;
+  max-width: 50%;
 }
 
-.skill-content {
-  padding-left: 1.5rem;
+.airplace-tickets {
+  transform: rotate(12deg);
 }
 
-.skill-content::before {
-  content: "<h3>";
-  margin-bottom: 5px;
-  color: black;
+.wavy-laptop {
+  transform: scaleX(-1);
+  position: relative;
+  top: -180px;
+  right: -150px;
+  z-index: 1;
 }
 
-.skill-content::after {
-  content: "</h3>";
-  margin-top: 5px;
-  color: black;
-}
-
-.skill-experience {
-  padding-left: 1rem;
-}
-
-.underline-green {
-  border-bottom: 2px solid greenyellow;
-}
-
-.underline-yellow {
-  border-bottom: 2px solid yellow;
-}
-
-.icon {
-  height: 50px;
-  width: 50px;
-  margin-right: 1rem;
+.overlap-images-container {
+  margin-top: 140px;
+  margin-left: 100px;
 }
 
 @media (max-width: 767px) {
+  .skill-images {
+    max-width: none;
+  }
+  .skill-description {
+    max-width: none;
+  }
   .skill {
-    width: 80%;
+    max-height: auto;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .skill {
-    width: 30%;
+    max-height: auto;
   }
 }

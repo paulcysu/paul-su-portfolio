@@ -1,6 +1,9 @@
 import "../assets/styles/skill.styles.css";
 import ReactIcon from "../assets/images/react.svg"
 import PhpIcon from "../assets/images/php.svg"
+import ReactLogo from "../assets/images/react.svg"
+import AirplaneTickets from "../assets/images/airplane-tickets.png"
+import WavyLaptop from "../assets/images/wavy-laptop.png"
 
 const skills = [
   {
@@ -25,25 +28,19 @@ const skills = [
 
 const SkillSection = () => {
   return (
-    <div id="skill">
-      <h2 className={"text-center"}>Skills</h2>
-      <div className={"skills-container"}>
-        {skills.map((skill, index) => (
-          <div className="skill" key={'skill-' + index}>
-            <div className="skill-title-container">
-              <img src={skill.icon} alt={skill.alt} className="icon" style={{color: skill.iconColor}} />
-              <div>
-                <h3 className={"skill-title"}>{skill.title}</h3>
-                <h3 className="skill-description">{skill.description}</h3>
-              </div>
-            </div>
-            <div className="skill-content">
-              <p className="skill-experience">{skill.experience}</p>
-            </div>
-          </div>
-        ))}
+    <section id="skill">
+      <div className="skill-images">
+        <div className="frontend-developer-bubble"><span className="highlight">Frontend</span> Developer</div>
+        <div className="overlap-images-container">
+          <img className="airplane-tickets" src={AirplaneTickets} />
+          <img className="wavy-laptop" src={WavyLaptop} />
+        </div>
+        <img className="react-logo" src={ReactLogo} />
       </div>
-    </div>
+      <div className="skill-description">
+        text
+      </div>
+    </section>
   );
 };
 

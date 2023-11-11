@@ -18,6 +18,7 @@
   visibility: hidden;
   backdrop-filter: blur(6px);
   transform: translate3d(0,-100%,0);
+  z-index: 10;
 }
 
 .show {
