@@ -39,7 +39,11 @@ const SkillSection = () => {
           <img className="react-logo" src={ReactLogo} />
         </div>
         <div className="skill-description">
-          text
+          <div className="web-developer-bubble"><span className="web-highlight">Fullstack</span> Developer</div>
+          <h3>3+ years experience</h3>
+          <h4 className="skill-text">Frontend: React, Javascript</h4>
+          {/* add node.js later */}
+          <h4 className="skill-text">Backend: Laravel, PHP, PostgreSQL</h4>
         </div>
       </div>
     </section>

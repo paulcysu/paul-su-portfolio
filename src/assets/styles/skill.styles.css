@@ -35,18 +35,19 @@
   z-index: 3;
   height: 25px;
   position: absolute;
-  bottom: -620px;
+  bottom: 300px;
   margin-left: 130px;
+  text-wrap: nowrap;
 }
 
 .highlight {
   position: relative;
-  font-weight: bold;
+  font-weight: 900;
   color: white;
 }
 
 .highlight::before {
-  background-color: #595510;
+  background-color: red;
   content: "";
   position: absolute;
   width: calc(100% + 4px);
@@ -60,10 +61,19 @@
 .skill-images {
   display: flex;
   max-width: 50%;
+  position: relative;
+  flex-wrap: nowrap;
 }
 
 .skill-description {
   max-width: 50%;
+  margin: auto 2em;
+  padding: 1em;
+}
+
+.skill-text {
+  margin: 0;
+  font-weight: 600;
 }
 
 .airplace-tickets {
@@ -78,25 +88,117 @@
   z-index: 1;
 }
 
+.web-developer-bubble {
+  background-color: #4BD7F8;
+  color: black;
+  padding: 1em;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 3;
+  height: 25px;
+  font-weight: bold;
+  width: fit-content;
+  position: relative;
+}
+
+.web-highlight {
+  position: relative;
+  font-weight: 900;
+}
+
+.web-highlight::before {
+  background-color: yellow;
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
 .overlap-images-container {
   margin-top: 140px;
   margin-left: 100px;
 }
 
 @media (max-width: 767px) {
-  .skill-images {
-    max-width: none;
-  }
-  .skill-description {
-    max-width: none;
-  }
   .skill {
     max-height: auto;
+  }
+
+  .skill-images {
+    max-width: none;
+    padding: 5em 0;
+  }
+
+  .skill-section {
+    flex-direction: column;
+    min-width: auto;
+  }
+
+  .skill-description {
+    max-width: none;
+    margin-bottom: 2em;
+  }
+
+  .airplane-tickets {
+    width: 200px;
+  }
+  
+  .wavy-laptop {
+    width: 200px;
+    top: auto;
+    right: auto;
+  }
+
+  .overlap-images-container {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .frontend-developer-bubble {
+    bottom: 55px;
+    margin-left: 105px;
+  }
+
+  .react-logo {
+    display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .skill {
     max-height: auto;
+  }
+
+  .skill-section {
+    flex-direction: column;
+    min-width: auto;
+  }
+
+  .airplane-tickets {
+    width: 200px;
+  }
+  
+  .wavy-laptop {
+    width: 200px;
+    top: -100px;
+    right: -100px;
+  }
+
+  .overlap-images-container {
+    margin-top: 50px;
+    margin-left: 200px;
+  }
+
+  .frontend-developer-bubble {
+    bottom: 100px;
+    margin-left: 155px;
+  }
+
+  .react-logo {
+    bottom: -50px;
   }
 }

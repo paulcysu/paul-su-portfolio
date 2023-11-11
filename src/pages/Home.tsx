@@ -16,7 +16,7 @@ const Home: React.FC = () => {
   return (
     <div id="home">
       <Navbar />
-      <section className={"home-section"}>
+      <section id={"home-section"}>
         <h1 className="name">PAUL SU</h1>
         <h4 style={{ textAlign: "center", color: textColor }}>
           <TypeAnimation
