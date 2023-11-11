@@ -1,12 +1,17 @@
 #skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-section {
   color: black;
   background-color: rgb(222, 222, 222);
   border-radius: 1rem;
-  margin: 1rem auto;
   padding: 1rem;
-  max-width: 1300px;
   display: flex;
   flex-wrap: wrap;
+  min-width: 1300px;
 }
 
 .react-logo {

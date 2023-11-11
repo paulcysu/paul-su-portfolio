@@ -29,16 +29,18 @@ const skills = [
 const SkillSection = () => {
   return (
     <section id="skill">
-      <div className="skill-images">
-        <div className="frontend-developer-bubble"><span className="highlight">Frontend</span> Developer</div>
-        <div className="overlap-images-container">
-          <img className="airplane-tickets" src={AirplaneTickets} />
-          <img className="wavy-laptop" src={WavyLaptop} />
+      <div className="skill-section">
+        <div className="skill-images">
+          <div className="frontend-developer-bubble"><span className="highlight">Frontend</span> Developer</div>
+          <div className="overlap-images-container">
+            <img className="airplane-tickets" src={AirplaneTickets} />
+            <img className="wavy-laptop" src={WavyLaptop} />
+          </div>
+          <img className="react-logo" src={ReactLogo} />
         </div>
-        <img className="react-logo" src={ReactLogo} />
-      </div>
-      <div className="skill-description">
-        text
+        <div className="skill-description">
+          text
+        </div>
       </div>
     </section>
   );

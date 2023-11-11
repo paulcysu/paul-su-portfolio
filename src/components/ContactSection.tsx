@@ -2,7 +2,7 @@ import "../assets/styles/contact.styles.css";
 
 const ContactSection = () => {
   return (
-    <div id="contact">
+    <section id="contact">
       <h2>Contact Me</h2>
       <ul>
         <li>
@@ -15,7 +15,7 @@ const ContactSection = () => {
           <a href="mailto:su.paul.cy@gmail.com">Email</a>
         </li>
       </ul>
-    </div>
+    </section>
   );
 };
 

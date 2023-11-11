@@ -41,7 +41,7 @@ const ExperienceSection: React.FC = () => {
   };
 
   return (
-    <div id="experience">
+    <section id="experience">
       {experienceItems.map((item, index) => (
         <div key={index}>
           <div onClick={() => handleItemClick(index)}>
@@ -61,7 +61,7 @@ const ExperienceSection: React.FC = () => {
           )}
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
