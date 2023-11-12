@@ -13,7 +13,6 @@
   flex-wrap: wrap;
   min-width: 1300px;
 }
-
 .react-logo {
   height: 100px;
   width: 100px;
@@ -24,6 +23,7 @@
   transform: rotate(20deg);
   left: -20px;
   bottom: -200px;
+  animation: moveUpDown 2s ease-in-out infinite;
 }
 
 .frontend-developer-bubble {
@@ -165,7 +165,9 @@
   }
 
   .react-logo {
-    display: none;
+    position: absolute;
+    top: 30px;
+    left: 200px;
   }
 }
 
@@ -206,5 +208,17 @@
 
   .react-logo {
     bottom: -50px;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

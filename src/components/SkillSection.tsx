@@ -1,37 +1,16 @@
 import "../assets/styles/skill.styles.css";
-import ReactIcon from "../assets/images/react.svg"
-import PhpIcon from "../assets/images/php.svg"
-import ReactLogo from "../assets/images/react.svg"
-import AirplaneTickets from "../assets/images/airplane-tickets.png"
-import WavyLaptop from "../assets/images/wavy-laptop.png"
+import ReactLogo from "../assets/images/react.svg";
+import AirplaneTickets from "../assets/images/airplane-tickets.png";
+import WavyLaptop from "../assets/images/wavy-laptop.png";
 
-const skills = [
-  {
-    title: 'Front End',
-    icon: ReactIcon,
-    alt: "React Logo",
-    description: 'React, Typescript',
-    experience: '3+ years of experience',
-    color: 'green',
-    iconColor: '#61DBFB'
-  },
-  {
-    title: 'Full Stack',
-    icon: PhpIcon,
-    alt: "PHP Logo",
-    description: 'Laravel, PostgreSQL',
-    experience: '2+ years of experience',
-    color: 'yellow',
-    iconColor: '#787cb5'
-  }
-]
-
-const SkillSection = () => {
+const SkillSection: React.FC = () => {
   return (
     <section id="skill">
       <div className="skill-section">
         <div className="skill-images">
-          <div className="frontend-developer-bubble"><span className="highlight">Frontend</span> Developer</div>
+          <div className="frontend-developer-bubble">
+            <span className="highlight">Frontend</span> Developer
+          </div>
           <div className="overlap-images-container">
             <img className="airplane-tickets" src={AirplaneTickets} />
             <img className="wavy-laptop" src={WavyLaptop} />
@@ -39,11 +18,15 @@ const SkillSection = () => {
           <img className="react-logo" src={ReactLogo} />
         </div>
         <div className="skill-description">
-          <div className="web-developer-bubble"><span className="web-highlight">Fullstack</span> Developer</div>
+          <div className="web-developer-bubble">
+            <span className="web-highlight">Fullstack</span> Developer
+          </div>
           <h3>3+ years experience</h3>
           <h4 className="skill-text">Frontend: React, Javascript</h4>
           {/* add node.js later */}
           <h4 className="skill-text">Backend: Laravel, PHP, PostgreSQL</h4>
+          {/* add openapi later */}
+          <h4 className="skill-text">Other: Git, Docker</h4>
         </div>
       </div>
     </section>

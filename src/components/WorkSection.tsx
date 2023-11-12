@@ -1,27 +1,33 @@
-import { motion } from "framer-motion";
-import { projects } from "../data/projects";
+import { projects, ProjectType } from "../data/projects";
+import Project from "./Project";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 import "../assets/styles/work.styles.css";
+import { useRef } from "react";
 
 const WorkSection = () => {
-  return (
-    <section id="work">
-      <h2 className="text-center" style={{paddingTop: "5rem"}}>My Work</h2>
+  const workRef = useRef<HTMLDivElement>();
+  const { scrollYProgress } = useScroll({
+    target: workRef,
+    offset: ["end end", "start start"],
+  });
 
-      <div className="projects">
-        {projects.map((project) => (
-          <motion.div
-            key={project.id}
-            className="project-card"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <img className="project-image" src={project.image} alt={project.title} />
-            <h4 className="project-title">{project.title}</h4>
-          </motion.div>
-        ))}
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+
+  return (
+    <div id="work" ref={workRef}>
+      <div className="progress">
+        <h3 className="work-title">work</h3>
+        <motion.div
+          className="progress-bar"
+          style={{ scaleX }}
+          initial={{ scaleX: 0 }}
+        ></motion.div>
       </div>
-    </section>
+      {projects.map((project: ProjectType) => (
+        <Project key={project.id} project={project} />
+      ))}
+    </div>
   );
 };
 

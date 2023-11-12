@@ -1,42 +1,36 @@
 #work {
-  background-image: url(../images/purple-water-paint-stroke.jpg);
+  /* background-image: url(../images/purple-water-paint-stroke.jpg);
   background-size: cover;
-  min-height: 100vh;
-}
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.project-card {
-  max-width: 45%;
-  border-radius: 1rem;
-  background: transparent !important;
-  backdrop-filter: blur(6px);
-  height: fit-content;
-  cursor: pointer;
-}
-
-.big-project-card {
-  max-width: 60%;
-}
-
-.sm-project-card {
-  max-width: 40%;
+  min-height: 100vh; */
+  position: relative;
 }
 
 .project-image {
-  width: 100%;
+  width: 500px;
   height: auto;
 }
 
 .project-title {
   padding: 1rem;
   margin: 0 0 0.5rem;
+}
+
+.progress {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  text-align: center;
+  color: orange;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: red;
+}
+
+.work-title {
+  /* margin: 1rem; */
 }
 
 @media (max-width: 767px) {

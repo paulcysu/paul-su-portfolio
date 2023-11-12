@@ -1,7 +1,7 @@
 import TFAgentSearch from '../assets/images/tf-agent-search.png'
 import BDLogin from '../assets/images/bd-login.png'
 
-interface Project {
+export type ProjectType = {
   id: number;
   title: string;
   description: string;
@@ -9,7 +9,7 @@ interface Project {
   link: string;
 }
 
-export const projects: Project[] = [
+export const projects: ProjectType[] = [
   {
     id: 1,
     title: "illūm - Tom Ferry Internationals",
@@ -20,6 +20,13 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Bridge Diagnostics",
+    description: "National healthcare services applications",
+    image: BDLogin,
+    link: "https://bridgediagnostics.com/"
+  },
+  {
+    id: 3,
+    title: "RL",
     description: "National healthcare services applications",
     image: BDLogin,
     link: "https://bridgediagnostics.com/"
