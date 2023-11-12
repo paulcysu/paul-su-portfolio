@@ -6,7 +6,7 @@ import ContactSection from "../components/ContactSection";
 import Navbar from "../components/ui/NavBar";
 import Lottie from "lottie-react";
 import { TypeAnimation } from "react-type-animation";
-
+import Cursor from "../components/cursor/Cursor";
 import "../assets/styles/home.styles.css";
 import scrollDown from "../assets/images/lottie-scroll-down.json";
 
@@ -15,6 +15,7 @@ const Home: React.FC = () => {
 
   return (
     <div id="home">
+      <Cursor />
       <Navbar />
       <section id={"home-section"}>
         <h1 className="name">PAUL SU</h1>
