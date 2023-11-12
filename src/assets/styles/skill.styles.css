@@ -145,11 +145,11 @@
   }
 
   .airplane-tickets {
-    width: 200px;
+    width: 160px;
   }
   
   .wavy-laptop {
-    width: 200px;
+    width: 160px;
     top: auto;
     right: auto;
   }
@@ -157,11 +157,13 @@
   .overlap-images-container {
     margin-top: 0;
     margin-left: 0;
+    width: 100%;
+    text-align: center;
   }
 
   .frontend-developer-bubble {
     bottom: 55px;
-    margin-left: 105px;
+    margin-left: 85px;
   }
 
   .react-logo {

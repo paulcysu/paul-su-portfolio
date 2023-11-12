@@ -6,7 +6,7 @@ import "../assets/styles/work.styles.css";
 import { useRef } from "react";
 
 const WorkSection = () => {
-  const workRef = useRef<HTMLDivElement>();
+  const workRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: workRef,
     offset: ["end end", "start start"],

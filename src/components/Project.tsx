@@ -1,22 +1,39 @@
-import { motion } from "framer-motion";
+import {
+  MotionValue,
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { ProjectType } from "../data/projects";
-
+import { useRef } from "react";
 interface ProjectProps {
   project: ProjectType;
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
+  const ref = useRef<HTMLImageElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    // offset: ["start start", "end start"],
+  });
+
+  const y: MotionValue<number> = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [-300, 300]
+  );
+
   return (
     <section>
-      <motion.div
-        key={project.id}
-        className="project-card"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <img className="project-image" src={project.image} alt={project.title} />
-        <h4 className="project-title">{project.title}</h4>
-      </motion.div>
+      <div className="container">
+        <img ref={ref} src={project.image} alt={project.title + " image"} />
+        <motion.div className="text-container" style={{ y: y }}>
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
+          <button>View Project</button>
+        </motion.div>
+      </div>
     </section>
   );
 };
