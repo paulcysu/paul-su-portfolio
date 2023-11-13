@@ -69,6 +69,14 @@ form button {
   font-weight: 700;
 }
 
+.invalid-email-error {
+  color: red;
+  padding-left: 10px;
+  position: relative;
+  font-weight: 700;
+  margin: 0;
+}
+
 @media (max-width: 767px) {
   .contact {
     width: 100%;

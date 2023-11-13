@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .skill-section {
@@ -11,6 +13,7 @@
   flex-wrap: wrap;
   min-width: 1300px;
 }
+
 .react-logo {
   height: 100px;
   width: 100px;
@@ -19,9 +22,10 @@
   background-color: white;
   position: relative;
   transform: rotate(20deg);
-  left: -20px;
+  left: -120px;
   bottom: -200px;
   animation: moveUpDown 2s ease-in-out infinite;
+  z-index: -1;
 }
 
 .frontend-developer-bubble {
@@ -65,8 +69,8 @@
 
 .skill-description {
   max-width: 50%;
-  margin: auto 2em;
-  padding: 1em;
+  margin: auto 0;
+  padding: 1em 2em;
 }
 
 .skill-text {
@@ -102,6 +106,8 @@
 .web-highlight {
   position: relative;
   font-weight: 900;
+  z-index: 0;
+  width: fit-content;
 }
 
 .web-highlight::before {
@@ -119,6 +125,16 @@
 .overlap-images-container {
   margin-top: 140px;
   margin-left: 100px;
+}
+
+.sliding-text-container {
+  position: absolute;
+  font-size: 20vh;
+  bottom: 0px;
+  white-space: nowrap;
+  color: grey;
+  width: 50%;
+  font-weight: bold;
 }
 
 @media (max-width: 767px) {
@@ -169,6 +185,10 @@
     top: 30px;
     left: 200px;
   }
+
+  .sliding-text-container {
+    font-size: 10vh;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -207,7 +227,12 @@
   }
 
   .react-logo {
+    left: -20px;
     bottom: -50px;
+  }
+
+  .sliding-text-container {
+    font-size: 10vh;
   }
 }
 

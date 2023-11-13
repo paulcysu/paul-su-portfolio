@@ -88,7 +88,7 @@ const NavBar: React.FC = () => {
             experience
           </Link>
           <Link
-            className={getLinkClassName("contact")}
+            className={getLinkClassName("contact") + " web-highlight"}
             to="contact"
             smooth={true}
             duration={500}
