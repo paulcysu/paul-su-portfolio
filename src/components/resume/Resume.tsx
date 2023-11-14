@@ -5,7 +5,7 @@ import Experience from "./Experience";
 
 
 const Resume: React.FC<{ list: ExperienceType[] }> = ({ list }) => {
-  const [expanded, setExpanded] = React.useState<string | false>(false);
+  const [expanded, setExpanded] = React.useState<string | false>("e1");
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {

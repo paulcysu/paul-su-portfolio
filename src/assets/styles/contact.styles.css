@@ -1,6 +1,8 @@
 #contact {
-  background-image: url(../images/green-water-paint-stroke.jpeg);
+  /* background-image: url(../images/green-water-paint-stroke.jpeg); */
+  background-image: url(../images/light-blue-water-paint-stroke.jpg);
   background-size: cover;
+  background-position: 20%;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -54,9 +56,10 @@ form textarea {
 form button {
   padding: 20px;
   border: none;
-  background-color: orange;
+  background-color: yellow;
   cursor: pointer;
   font-weight: 500;
+  color: black;
 }
 
 .contact h2,

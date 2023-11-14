@@ -1,6 +1,7 @@
 #experience {
-  background-image: url(../images/yellow-water-paint-stroke.png);
-  background-size: cover;
+  background-image: url(../images/light-blue-water-paint-stroke.jpg);
+  background-size: auto;
+  background-position: 5%;
   min-height: 100vh;
   padding-top: 5vh;
 }
@@ -14,4 +15,30 @@
   max-width: 800px;
   margin: auto;
   padding: 1em;
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  grid-gap: 1em;
+}
+
+.experience-content img {
+  width: 70px;
+}
+
+.location-website {
+  display: flex;
+  gap: 5px;
+}
+
+.location-website p:first-child {
+  margin-right: 1em;
+  padding-left: 10px;
+}
+
+.experience-skills div{
+  padding: 8px 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }

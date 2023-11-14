@@ -1,3 +1,7 @@
+import IllumLogo from "../assets/images/illum_logo.png";
+import BridgeDiagnosticLogo from "../assets/images/bridge-diagnostics.png";
+import NALogo from "../assets/images/newport-applications-logo.jpeg";
+
 export type ExperienceType = {
   id: string;
   title: string;
@@ -16,8 +20,8 @@ export const experiences: ExperienceType[] = [
     title: "Bridge Diagnostic",
     location: 'Irvine, CA',
     website: 'https://bridgediagnostics.com/',
-    description: 'Developed health care administration software for laboratory process, medical billing, and claims management. Bullt application using React, TypeScript, and Python.',
-    logo: 'https://bridgediagnostics.com/wp-content/uploads/2020/08/bridge-logo-1.png',
+    description: 'Developed health care administration software for laboratory process, medical billing, and claims management. Bullt application using React, TypeScript, Python, and FastAPI.',
+    logo: BridgeDiagnosticLogo,
     skills: ['React', 'TypeScript', 'Redux', 'Python', 'FastAPI', 'PostgreSQL', 'Docker'],
     start: "2021",
     end: "2023"
@@ -25,10 +29,10 @@ export const experiences: ExperienceType[] = [
   {
     id: "e2",
     title: "Newport Applications",
-    location: 'Seattle, WA',
+    location: 'Newport Beach, CA',
     website: null,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam eu bibendum bibendum, elit sapien bibendum elit, vel bibendum elit sapien vitae magna.',
-    logo: 'https://www.np.com/wp-content/uploads/2019/12/TFI-Logo-Color-1.png',
+    description: 'Built dashboard, datagrid, and assignments for teachers and caretakes of children with disability. Used React, Python, and Django.',
+    logo: NALogo,
     skills: ['React', 'Python', 'Django'],
     start: "2021",
     end: "2021"
@@ -36,10 +40,10 @@ export const experiences: ExperienceType[] = [
   {
     id: "e3",
     title: "Tom Ferry International",
-    location: 'New York, NY',
+    location: 'Orange County, CA',
     website: 'https://www.tomferry.com/',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam eu bibendum bibendum, elit sapien bibendum elit, vel bibendum elit sapien vitae magna.',
-    logo: 'https://www.tomferry.com/wp-content/uploads/2019/12/TFI-Logo-Color-1.png',
+    description: 'Developed a real estate CRM and marketing platform. Built application using React, Laravel, and PostgreSQL.',
+    logo: IllumLogo,
     skills: ['React', 'Laravel', 'JavaScript', 'PHP', 'PostgreSQL', 'Docker'],
     start: "2019",
     end: "2021"
