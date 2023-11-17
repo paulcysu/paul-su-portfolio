@@ -30,13 +30,6 @@
   position: relative;
 }
 
-.phoneSvg {
-  stroke: orange;
-  position: absolute;
-  margin: auto;
-  z-index: -1;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -95,8 +88,8 @@ form button {
   }
 
   .form-container {
-    padding: 50px;
-    width: 100%;
+    width: 90%;
+    padding-top: 10px;
   }
 
   form textarea {

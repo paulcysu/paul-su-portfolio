@@ -21,9 +21,9 @@ const variants = {
 const ContactSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [email, setEmail] = useState("");
+  const [error, setError] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("");
 
   const [emailError, setEmailError] = useState("");
 
@@ -111,7 +111,7 @@ const ContactSection = () => {
             {emailError && <p className="invalid-email-error">{emailError}</p>}
             <textarea rows={8} required placeholder="Message" name="message" />
             <button
-              style={{ backgroundColor: success ? "green" : "orange" }}
+              style={{ backgroundColor: success ? "green" : "yellow" }}
               disabled={success}
             >
               {success ? "Sent" : "Submit"}
