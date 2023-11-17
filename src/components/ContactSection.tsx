@@ -18,13 +18,13 @@ const variants = {
   },
 };
 
+type sendingType = "success" | "error" | "loading" | ""
+
 const ContactSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
-  const [error, setError] = useState<boolean>(false);
-  const [success, setSuccess] = useState<boolean>(false);
+  const [sending, setSending] = useState<sendingType>("");
   const [email, setEmail] = useState<string>("");
-
   const [emailError, setEmailError] = useState("");
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,6 +48,7 @@ const ContactSection = () => {
     if (formRef.current === null) return;
     if (!validateEmail(email)) return;
 
+    setSending("loading");
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID as string,
@@ -58,15 +59,18 @@ const ContactSection = () => {
       .then(
         (result) => {
           console.log(result?.text);
-          setError(false);
-          setSuccess(true);
+          setSending("success");
         },
         (error) => {
           console.error(error?.text);
-          setError(true);
+          setSending("error");
         }
       );
   };
+
+  const success = sending === "success";
+  const error = sending === "error";
+  const loading = sending === "loading";
 
   return (
     <section id="contact">
@@ -118,12 +122,12 @@ const ContactSection = () => {
             {emailError && <p className="invalid-email-error">{emailError}</p>}
             <textarea rows={8} required placeholder="Message" name="message" />
             <button
-              style={{ backgroundColor: success ? "green" : "yellow" }}
-              disabled={success}
+              style={{ backgroundColor: loading ? "grey" : success ? "green" : "yellow" }}
+              disabled={loading || success}
             >
-              {success ? "Sent" : "Submit"}
+              {loading ? "Please wait" :success ? "Sent" : "Submit"}
             </button>
-            {error && <p style={{ color: "red" }}>{error && "Error"}</p>}
+            {error && <p style={{ color: "red" }}>{error && "Please try again"}</p>}
           </motion.form>
         </div>
       </motion.div>
