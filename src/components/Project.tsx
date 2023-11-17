@@ -28,7 +28,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           <p>{project.description}</p>
           <SkillList list={project.skills} />
           <a href={project.link} target="_blank" rel="noopener noreferrer">
-            <button style={{ fontWeight: 800, width: "100%" }}>View Project</button>
+            <button style={{ fontWeight: 800, width: "100%" }}>View Website</button>
           </a>
         </motion.div>
       </div>
