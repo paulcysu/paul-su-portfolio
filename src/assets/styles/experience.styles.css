@@ -21,15 +21,21 @@
   display: grid;
   grid-template-columns: 8fr 1fr;
   grid-gap: 1em;
+  padding: 1em 10px;
 }
 
 .experience-content img {
   width: 70px;
 }
 
+.experience-content p {
+  padding: 18px;
+}
+
 .location-website {
   display: flex;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 .location-website p:first-child {
@@ -41,4 +47,31 @@
   padding: 8px 15px;
   margin-right: 5px;
   margin-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+  .experience-content {
+    grid-template-columns: repeat(auto-fill, 300px);
+  }
+  
+  .experience-content {
+    padding: 0;
+  }
+
+  .experience-content img {
+    width: 70px;
+    padding: 25px 0 0 5px;
+    order: 1;
+  }
+  
+  .experience-content p {
+    padding: 10px 5px 25px;
+    order: 2;
+  }
+}
+
+@media (max-width: 450px) {
+  .website {
+    margin-top: 5px;
+  }
 }

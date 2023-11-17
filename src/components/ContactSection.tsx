@@ -100,13 +100,20 @@ const ContactSection = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
           >
-            <input type="text" required placeholder="Name" name="name" />
+            <input
+              type="text"
+              required
+              placeholder="Name"
+              name="name"
+              autoComplete="on"
+            />
             <input
               type="email"
               required
               placeholder="Email"
               name="email"
               onChange={handleEmailChange}
+              autoComplete="on"
             />
             {emailError && <p className="invalid-email-error">{emailError}</p>}
             <textarea rows={8} required placeholder="Message" name="message" />

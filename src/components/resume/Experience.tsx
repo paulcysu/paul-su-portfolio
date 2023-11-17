@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import { ExpandMore, LocationOn, OpenInNew } from "@mui/icons-material";
 import { ExperienceType } from "../../data/experiences";
-import Chip from '@mui/joy/Chip';
+import SkillList from "../ui/SkillList";
 interface ExperienceProps {
   experience: ExperienceType;
   expanded: boolean;
@@ -47,12 +47,14 @@ const Experience: React.FC<ExperienceProps> = ({
       </AccordionSummary>
       <AccordionDetails>
         <div className="location-website">
-          <LocationOn style={{ color: "green" }} />
-          <Typography style={{ paddingRight: 20 }}>
-            {experience.location}
-          </Typography>
+          <div className="flex">
+            <LocationOn style={{ color: "green" }} />
+            <Typography style={{ paddingRight: 20 }}>
+              {experience.location}
+            </Typography>
+          </div>
           {experience.website && (
-            <>
+            <div className="flex website">
               <OpenInNew style={{ color: "blue" }} />
               <Link
                 rel="noopener noreferrer"
@@ -61,28 +63,16 @@ const Experience: React.FC<ExperienceProps> = ({
               >
                 {experience.website}
               </Link>
-            </>
+            </div>
           )}
         </div>
         <div className="experience-content">
-          <div>
-            <Typography
-              style={{
-                padding: 10,
-              }}
-            >
-              {experience.description}
-            </Typography>
-          </div>
+          <Typography>
+            {experience.description}
+          </Typography>
           <img src={experience.logo} alt={`${experience.title} Logo`} />
         </div>
-        <div className="experience-skills">
-          {experience.skills.map((skill) => (
-            <Chip color="primary" size="lg" variant="solid">
-              {skill}
-            </Chip>
-          ))}
-        </div>
+        <SkillList list={experience.skills} />
       </AccordionDetails>
     </Accordion>
   );
