@@ -19,7 +19,7 @@ interface ExperienceProps {
 const Experience: React.FC<ExperienceProps> = ({
   experience,
   expanded,
-  onClick = () => {},
+  onClick,
 }) => {
   return (
     <Accordion expanded={expanded} onChange={onClick(experience.id)}>
@@ -67,9 +67,7 @@ const Experience: React.FC<ExperienceProps> = ({
           )}
         </div>
         <div className="experience-content">
-          <Typography>
-            {experience.description}
-          </Typography>
+          <Typography>{experience.description}</Typography>
           <img src={experience.logo} alt={`${experience.title} Logo`} />
         </div>
         <SkillList list={experience.skills} />

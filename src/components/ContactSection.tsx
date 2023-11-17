@@ -27,7 +27,7 @@ const ContactSection = () => {
 
   const [emailError, setEmailError] = useState("");
 
-  const handleEmailChange = (event) => {
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
   };
 
