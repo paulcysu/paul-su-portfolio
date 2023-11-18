@@ -11,3 +11,8 @@ section {
   display: flex;
   gap: 5px;
 }
+
+.h4 {
+  font-size: 1.5em;
+  font-weight: 700;
+}

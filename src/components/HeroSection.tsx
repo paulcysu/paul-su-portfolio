@@ -10,8 +10,8 @@ const HeroSection = () => {
   return (
     <section id={"home-section"}>
       <h1 className="name">PAUL SU</h1>
-      <h4 className="title" style={{ marginBottom: 0}}>WEB DEVELOPER</h4>
-      <h4 style={{ color: textColor, marginTop: 10 }}>
+      <p className="title h4" style={{ marginBottom: 0}}>WEB DEVELOPER</p>
+      <p className="title h4" style={{ color: textColor, marginTop: 10 }}>
         <TypeAnimation
           sequence={[
             () => setTextColor("red"),
@@ -24,7 +24,7 @@ const HeroSection = () => {
           cursor={true}
           repeat={Infinity}
         />
-      </h4>
+      </p>
       <div className="scroll-down-container">
         <div className="scroll-down">
           <Lottie
