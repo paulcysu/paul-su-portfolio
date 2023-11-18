@@ -2,11 +2,8 @@ import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import { ProjectType } from "../data/projects";
 import { useRef } from "react";
 import SkillList from "./ui/SkillList";
-interface ProjectProps {
-  project: ProjectType;
-}
 
-const Project: React.FC<ProjectProps> = ({ project }) => {
+const Project = ({ image, title, description, skills, link }: ProjectType) => {
   const ref = useRef<HTMLImageElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -22,13 +19,15 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
   return (
     <section>
       <div className="container">
-        <img ref={ref} src={project.image} alt={project.title + " image"} />
+        <img ref={ref} src={image} alt={title + " image"} />
         <motion.div className="text-container" style={{ y: y }}>
-          <h3>{project.title}</h3>
-          <p>{project.description}</p>
-          <SkillList list={project.skills} />
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
-            <button style={{ fontWeight: 800, width: "100%" }}>View Website</button>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <SkillList list={skills} />
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <button style={{ fontWeight: 800, width: "100%" }}>
+              View Website
+            </button>
           </a>
         </motion.div>
       </div>

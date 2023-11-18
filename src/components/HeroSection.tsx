@@ -5,12 +5,17 @@ import scrollDown from "../assets/images/lottie-scroll-down.json";
 import "../assets/styles/hero.styles.css";
 
 const HeroSection = () => {
-  const [textColor, setTextColor] = useState("black");
+  const [textColor, setTextColor] = useState<string>("black");
+
+  const name: string = "PAUL SU";
+  const title: string = "WEB DEVELOPER";
 
   return (
     <section id={"home-section"}>
-      <h1 className="name">PAUL SU</h1>
-      <p className="title h4" style={{ marginBottom: 0}}>WEB DEVELOPER</p>
+      <h1 className="name">{name}</h1>
+      <p className="title h4" style={{ marginBottom: 0 }}>
+        {title}
+      </p>
       <p className="title h4" style={{ color: textColor, marginTop: 10 }}>
         <TypeAnimation
           sequence={[

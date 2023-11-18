@@ -6,7 +6,7 @@ interface SkillListProps {
   list: string[];
 }
 
-const SkillList: React.FC<SkillListProps> = ({ list }) => {
+const SkillList = ({ list }: SkillListProps) => {
   return (
     <div className="experience-skills">
       {list.map((skill) => (

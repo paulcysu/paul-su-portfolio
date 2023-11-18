@@ -10,8 +10,8 @@ export type ExperienceType = {
   description: string;
   skills: string[];
   logo: string;
-  start: string;
-  end: string;
+  start?: string;
+  end?: string;
 };
 
 export const experiences: ExperienceType[] = [

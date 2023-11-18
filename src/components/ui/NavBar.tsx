@@ -7,9 +7,9 @@ import "../../assets/styles/nav-bar.styles.css";
 const hoverClass: string = "nav-link";
 const notHoverClass: string = "nav-link not-hover";
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [hover, setHover] = useState<string | null>(null);
+  const [hover, setHover] = useState<string | null>();
   const [isSticky, setIsSticky] = useState<boolean>(false);
 
   const toggleMobileMenu = () => {

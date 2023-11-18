@@ -1,9 +1,8 @@
 import { projects, ProjectType } from "../data/projects";
 import Project from "./Project";
 import { motion, useScroll, useSpring } from "framer-motion";
-
-import "../assets/styles/work.styles.css";
 import { useRef } from "react";
+import "../assets/styles/work.styles.css";
 
 const WorkSection = () => {
   const workRef = useRef<HTMLDivElement>(null);
@@ -25,7 +24,7 @@ const WorkSection = () => {
         ></motion.div>
       </div>
       {projects.map((project: ProjectType) => (
-        <Project key={project.id} project={project} />
+        <Project key={project.id} {...project} />
       ))}
     </div>
   );

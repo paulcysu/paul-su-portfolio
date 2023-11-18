@@ -3,29 +3,44 @@ import "../assets/styles/contact.styles.css";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-const variants = {
+type Variant = {
   initial: {
-    y: 100,
-    opacity: 0,
-  },
+    y: number;
+    opacity: number;
+  };
   animate: {
-    y: 0,
-    opacity: 1,
+    y: number;
+    opacity: number;
     transition: {
-      duration: 1,
-      staggerChildren: 0.7,
-    },
-  },
+      duration: number;
+      staggerChildren: number;
+    };
+  };
 };
 
-type sendingType = "success" | "error" | "loading" | ""
+type Sending = "success" | "error" | "loading" | ""
 
 const ContactSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
-  const [sending, setSending] = useState<sendingType>("");
+  const [sending, setSending] = useState<Sending>("");
   const [email, setEmail] = useState<string>("");
-  const [emailError, setEmailError] = useState("");
+  const [emailError, setEmailError] = useState<string>("");
+
+  const variants: Variant = {
+    initial: {
+      y: 100,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.5,
+      },
+    },
+  };
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -72,6 +87,32 @@ const ContactSection = () => {
   const error = sending === "error";
   const loading = sending === "loading";
 
+  function getBackgroundColorBySending(sending: Sending): string {
+    switch(sending) {
+      case "success":
+        return "green";
+      case "error":
+        return "red";
+      case "loading":
+        return "grey";
+      default:
+        return "yellow";
+    }
+  }
+
+  function getTextBySending(sending: Sending): string {
+    switch(sending) {
+      case "success":
+        return "Sent";
+      case "error":
+        return "Please try again";
+      case "loading":
+        return "Please wait";
+      default:
+        return "Submit";
+    }
+  }
+
   return (
     <section id="contact">
       <motion.div
@@ -82,7 +123,7 @@ const ContactSection = () => {
         whileInView="animate"
       >
         <motion.div className="text-container" variants={variants}>
-          <motion.h2 variants={variants}>Let’s work together</motion.h2>
+          <motion.h2 variants={variants}>Let's work together</motion.h2>
           <motion.div className="item" variants={variants}>
             <h4>Mail</h4>
             <h4 className="web-highlight">{import.meta.env.VITE_EMAIL}</h4>
@@ -122,10 +163,10 @@ const ContactSection = () => {
             {emailError && <p className="invalid-email-error">{emailError}</p>}
             <textarea rows={8} required placeholder="Message" name="message" />
             <button
-              style={{ backgroundColor: loading ? "grey" : success ? "green" : "yellow" }}
+              style={{ backgroundColor: getBackgroundColorBySending(sending) }}
               disabled={loading || success}
             >
-              {loading ? "Please wait" :success ? "Sent" : "Submit"}
+              {getTextBySending(sending)}
             </button>
             {error && <p style={{ color: "red" }}>{error && "Please try again"}</p>}
           </motion.form>

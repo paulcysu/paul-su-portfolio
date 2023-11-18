@@ -16,11 +16,7 @@ interface ExperienceProps {
   ) => (event: React.SyntheticEvent, isExpanded: boolean) => void | undefined;
 }
 
-const Experience: React.FC<ExperienceProps> = ({
-  experience,
-  expanded,
-  onClick,
-}) => {
+const Experience = ({ experience, expanded, onClick }: ExperienceProps) => {
   return (
     <Accordion expanded={expanded} onChange={onClick(experience.id)}>
       <AccordionSummary

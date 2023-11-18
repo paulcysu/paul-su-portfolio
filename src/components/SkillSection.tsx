@@ -4,21 +4,22 @@ import AirplaneTickets from "../assets/images/airplane-tickets.webp";
 import WavyLaptop from "../assets/images/wavy-laptop.webp";
 import { motion, Variants } from "framer-motion";
 
-const sliderVariants: Variants = {
-  initial: {
-    x: 0,
-  },
-  animate: {
-    x: "-200%",
-    transition: {
-      repeat: Infinity,
-      repeatType: "mirror",
-      duration: 7,
+const SkillSection = () => {
+  
+  const sliderVariants: Variants = {
+    initial: {
+      x: 0,
     },
-  },
-};
+    animate: {
+      x: "-200%",
+      transition: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 7,
+      },
+    },
+  };
 
-const SkillSection: React.FC = () => {
   return (
     <section id="skill">
       <div className="skill-section">
