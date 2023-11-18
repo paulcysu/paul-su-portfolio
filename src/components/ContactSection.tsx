@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 const variants = {
   initial: {
-    y: 500,
+    y: 100,
     opacity: 0,
   },
   animate: {
@@ -13,7 +13,7 @@ const variants = {
     opacity: 1,
     transition: {
       duration: 1,
-      staggerChildren: 0.1,
+      staggerChildren: 0.7,
     },
   },
 };
@@ -102,7 +102,7 @@ const ContactSection = () => {
             onSubmit={sendEmail}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
           >
             <input
               type="text"
