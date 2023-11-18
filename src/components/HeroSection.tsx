@@ -10,18 +10,16 @@ const HeroSection = () => {
   return (
     <section id={"home-section"}>
       <h1 className="name">PAUL SU</h1>
-      <h4 style={{ textAlign: "center", color: textColor }}>
+      <h4 className="title" style={{ marginBottom: 0}}>WEB DEVELOPER</h4>
+      <h4 style={{ color: textColor, marginTop: 10 }}>
         <TypeAnimation
           sequence={[
-            "WEB DEVELOPER",
-            2000,
             () => setTextColor("red"),
-            "WEB DEVELOPER: FRONT END",
+            "FRONT END",
             2000,
             () => setTextColor("yellow"),
-            "WEB DEVELOPER: FULL STACK",
+            "FULL STACK",
             2000,
-            () => setTextColor("black"),
           ]}
           cursor={true}
           repeat={Infinity}

@@ -1,7 +1,7 @@
 import "../assets/styles/skill.styles.css";
 import ReactLogo from "../assets/images/react.svg";
-import AirplaneTickets from "../assets/images/airplane-tickets.png";
-import WavyLaptop from "../assets/images/wavy-laptop.png";
+import AirplaneTickets from "../assets/images/airplane-tickets.webp";
+import WavyLaptop from "../assets/images/wavy-laptop.webp";
 import { motion, Variants } from "framer-motion";
 
 const sliderVariants: Variants = {
@@ -27,10 +27,10 @@ const SkillSection: React.FC = () => {
             <span className="highlight">Frontend</span> Developer
           </div>
           <div className="overlap-images-container">
-            <img className="airplane-tickets" src={AirplaneTickets} />
-            <img className="wavy-laptop" src={WavyLaptop} />
+            <img className="airplane-tickets" src={AirplaneTickets} alt="Airplane with Tickets Illustration"/>
+            <img className="wavy-laptop" src={WavyLaptop} alt="Laptop Illustration" />
           </div>
-          <img className="react-logo" src={ReactLogo} />
+          <img className="react-logo" src={ReactLogo} alt="React Logo"/>
         </div>
         <div className="skill-description">
           <div className="web-developer-bubble">

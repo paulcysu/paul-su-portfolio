@@ -1,6 +1,6 @@
-import IllumLogo from "../assets/images/illum_logo.png";
-import BridgeDiagnosticLogo from "../assets/images/bridge-diagnostics.png";
-import NALogo from "../assets/images/newport-applications-logo.jpeg";
+import IllumLogo from "../assets/images/illum_logo.webp";
+import BridgeDiagnosticLogo from "../assets/images/bridge-diagnostics.webp";
+import NALogo from "../assets/images/newport-applications-logo.webp";
 
 export type ExperienceType = {
   id: string;

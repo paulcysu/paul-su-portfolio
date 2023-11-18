@@ -54,6 +54,7 @@ const NavBar: React.FC = () => {
             duration={500}
             onMouseEnter={() => setHover("home")}
             onClick={onLinkClick}
+            rel="nofollow"
           >
             home
           </Link>
@@ -64,6 +65,7 @@ const NavBar: React.FC = () => {
             duration={500}
             onMouseEnter={() => setHover("skill")}
             onClick={onLinkClick}
+            rel="nofollow"
           >
             skill
           </Link>
@@ -74,6 +76,7 @@ const NavBar: React.FC = () => {
             duration={500}
             onMouseEnter={() => setHover("work")}
             onClick={onLinkClick}
+            rel="nofollow"
           >
             work
           </Link>
@@ -84,6 +87,7 @@ const NavBar: React.FC = () => {
             duration={500}
             onMouseEnter={() => setHover("experience")}
             onClick={onLinkClick}
+            rel="nofollow"
           >
             experience
           </Link>
@@ -94,6 +98,7 @@ const NavBar: React.FC = () => {
             duration={500}
             onMouseEnter={() => setHover("contact")}
             onClick={onLinkClick}
+            rel="nofollow"
           >
             contact
           </Link>

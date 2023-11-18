@@ -1,5 +1,5 @@
-import TFAgentSearch from '../assets/images/tf-agent-search.png'
-import BDLogin from '../assets/images/bd-login.png'
+import TFAgentSearch from '../assets/images/tomferry-agent-search.webp'
+import BDReport from '../assets/images/bd-report.webp'
 
 export type ProjectType = {
   id: number;
@@ -24,7 +24,7 @@ export const projects: ProjectType[] = [
     id: 2,
     title: "Bridge Diagnostics",
     description: "A national healthcare services company providing clinical diagnostic information, clinic workflow solutions, population health management tools, and precision medicine data as part of a holistic value-based care delivery model",
-    image: BDLogin,
+    image: BDReport,
     link: "https://bridgediagnostics.com/",
     skills: ['React', 'TypeScript', 'Redux', 'Python', 'FastAPI', 'PostgreSQL', 'Docker'],
   },

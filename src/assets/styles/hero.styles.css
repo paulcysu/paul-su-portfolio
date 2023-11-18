@@ -1,8 +1,8 @@
 #home-section {
-  background-image: url(../images/light-blue-water-paint-stroke.jpg);
+  background-image: url(../images/light-blue-water-paint-stroke.webp);
   background-size: cover;
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;

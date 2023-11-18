@@ -1,9 +1,8 @@
 #contact {
-  /* background-image: url(../images/green-water-paint-stroke.jpeg); */
   background-image: url(../images/light-blue-water-paint-stroke.jpg);
   background-size: cover;
   background-position: 20%;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   gap: 50px;
