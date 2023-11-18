@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./cursor.styles.css";
-import { Position } from "lottie-react";
 
 const Cursor = () => {
-  const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const mouseMove = (e: MouseEvent) => {

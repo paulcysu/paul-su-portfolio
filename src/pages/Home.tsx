@@ -1,7 +1,7 @@
-import SkillSection from "../components/SkillSection";
-import WorkSection from "../components/WorkSection";
-import ExperienceSection from "../components/ExperienceSection";
-import ContactSection from "../components/ContactSection";
+// import SkillSection from "../components/SkillSection";
+// import WorkSection from "../components/WorkSection";
+// import ExperienceSection from "../components/ExperienceSection";
+// import ContactSection from "../components/ContactSection";
 import Navbar from "../components/ui/NavBar";
 import Cursor from "../components/cursor/Cursor";
 import HeroSection from "../components/HeroSection";
@@ -13,10 +13,10 @@ const Home: React.FC = () => {
       <Cursor />
       <Navbar />
       <HeroSection />
-      <SkillSection />
+      {/* <SkillSection />
       <WorkSection />
       <ExperienceSection />
-      <ContactSection />
+      <ContactSection /> */}
     </div>
   );
 };
