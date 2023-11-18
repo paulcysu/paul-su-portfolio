@@ -131,7 +131,7 @@
   font-size: 20vh;
   bottom: 0px;
   white-space: nowrap;
-  color: grey;
+  color: lightgoldenrodyellow;
   width: 50%;
   font-weight: bold;
 }
@@ -186,7 +186,7 @@
   }
 
   .sliding-text-container {
-    font-size: 10vh;
+    font-size: 5em;
   }
 }
 
@@ -231,7 +231,7 @@
   }
 
   .sliding-text-container {
-    font-size: 10vh;
+    font-size: 5em;
   }
 }
 

@@ -5,7 +5,7 @@ import WavyLaptop from "../assets/images/wavy-laptop.webp";
 import { motion, Variants } from "framer-motion";
 
 const SkillSection = () => {
-  
+
   const sliderVariants: Variants = {
     initial: {
       x: 0,
@@ -15,7 +15,7 @@ const SkillSection = () => {
       transition: {
         repeat: Infinity,
         repeatType: "mirror",
-        duration: 7,
+        duration: 6,
       },
     },
   };
@@ -50,7 +50,7 @@ const SkillSection = () => {
           initial="initial"
           animate="animate"
         >
-          Easygoing Gamer Playful Anime 
+          Reliable Cooking Kind Tennis
         </motion.div>
       </div>
     </section>
