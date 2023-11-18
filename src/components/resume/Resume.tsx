@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import "./resume.styles.css";
 import { ExperienceType } from "../../data/experiences";
 import Experience from "./Experience";
@@ -8,11 +8,11 @@ type ResumeProps = {
 };
 
 const Resume = ({ list }: ResumeProps) => {
-  const [expanded, setExpanded] = React.useState<string | null>("e1");
+  const [expanded, setExpanded] = useState("e1");
 
   const handleChange =
     (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(isExpanded ? panel : null);
+      setExpanded(isExpanded ? panel : "");
     };
 
   return (

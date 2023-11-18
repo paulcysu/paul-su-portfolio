@@ -25,7 +25,6 @@
   left: -120px;
   bottom: -200px;
   animation: moveUpDown 2s ease-in-out infinite;
-  z-index: -1;
 }
 
 .frontend-developer-bubble {
@@ -91,7 +90,7 @@
 }
 
 .web-developer-bubble {
-  background-color: #4BD7F8;
+  background-color: white;
   color: black;
   padding: 1em;
   border-radius: 5px;

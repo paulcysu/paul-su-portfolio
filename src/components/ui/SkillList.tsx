@@ -1,8 +1,7 @@
-import React from "react";
 import Chip from '@mui/joy/Chip';
 import { v4 as uuidv4 } from 'uuid';
 
-interface SkillListProps {
+type SkillListProps = {
   list: string[];
 }
 

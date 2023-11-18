@@ -1,6 +1,4 @@
 #work {
-  background-image: url(../images/light-blue-water-paint-stroke.webp);
-  background-size: cover;
   position: relative;
 }
 
@@ -24,7 +22,8 @@
 
 .progress-bar {
   height: 10px;
-  background-color: cornflowerblue;
+  background-color: yellow;
+  margin-bottom: 20px;
 }
 
 .container {

@@ -8,9 +8,9 @@ const hoverClass: string = "nav-link";
 const notHoverClass: string = "nav-link not-hover";
 
 const NavBar = () => {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [hover, setHover] = useState<string | null>();
-  const [isSticky, setIsSticky] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [hover, setHover] = useState("");
+  const [isSticky, setIsSticky] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobile(!isMobile);
@@ -30,7 +30,7 @@ const NavBar = () => {
   }, []);
 
   const getLinkClassName = (link: string): string => {
-    if (hover === null) return hoverClass;
+    if (!hover) return hoverClass;
     return hover === link ? hoverClass : notHoverClass;
   };
 
@@ -44,7 +44,7 @@ const NavBar = () => {
     <>
       <nav
         className={`navbar ${isSticky ? "sticky show" : ""}`}
-        onMouseLeave={() => setHover(null)}
+        onMouseLeave={() => setHover("")}
       >
         <div className={`navbar-container ${isMobile ? 'open-nav' : ''}`}>
           <Link

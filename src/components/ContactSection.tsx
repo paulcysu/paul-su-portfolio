@@ -24,8 +24,8 @@ const ContactSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const [sending, setSending] = useState<Sending>("");
-  const [email, setEmail] = useState<string>("");
-  const [emailError, setEmailError] = useState<string>("");
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
 
   const variants: Variant = {
     initial: {

@@ -1,0 +1,11 @@
+#home {
+  background-image: url(../images/light-blue-water-paint-stroke.webp);
+  background-size: auto;
+  background-position: top -30% right 80%;
+}
+
+@media (max-width: 767px) {
+  #home {
+    background-position: top right 50%;
+  }
+}

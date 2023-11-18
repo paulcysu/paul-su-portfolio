@@ -8,7 +8,7 @@ import {
 import { ExpandMore, LocationOn, OpenInNew } from "@mui/icons-material";
 import { ExperienceType } from "../../data/experiences";
 import SkillList from "../ui/SkillList";
-interface ExperienceProps {
+type ExperienceProps = {
   experience: ExperienceType;
   expanded: boolean;
   onClick: (

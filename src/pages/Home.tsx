@@ -5,6 +5,7 @@ import ContactSection from "../components/ContactSection";
 import Navbar from "../components/ui/NavBar";
 import Cursor from "../components/cursor/Cursor";
 import HeroSection from "../components/HeroSection";
+import "../assets/styles/home.styles.css";
 
 const Home: React.FC = () => {
   return (
